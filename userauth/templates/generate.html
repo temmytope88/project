@@ -23,32 +23,22 @@
             </a>
         </div>
         <div id="B" class="overlay-content">
-            <a href="dashboard.html">
+            <a href="{% url 'dashboard' %}">
                     <span>
                         {% load static %}
                         <img src="{% static 'icons/folder-2.png' %}" alt="Folder Icon">
                     </span>
                 <span>Dashboard</span>
             </a>
-            <a href="policy.html">
+            <a href="{% url 'policy' %}">
                 {% load static %}
                 <span><img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon"></span>
                 <span>Policies</span>
             </a>
-            <a href="">
+            <a href="{% url 'dashboard' %}">
                 {% load static %}
                 <span><img src="{% static 'icons/profile.png' %}" alt="Profile Icon"></span>
                 <span>My Profile</span>
-            </a>
-            <a href="">
-                {% load static %}
-                <span><img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon"></span>
-                <span>Downloads</span>
-            </a>
-            <a href="saved.html">
-                {% load static %}
-                <span><img src="{% static 'icons/save-2.png' %}" alt="Saved Icon"></span>
-                <span>Saved</span>
             </a>
         </div>
         <div id="C">
@@ -57,7 +47,7 @@
                 <span><img src="{% static 'icons/user.png' %}" alt="User Icon"></span>
                 <span>Musa</span>
             </div>
-            <a href="" id="log-out">
+            <a href="{% url 'loginform' %}" id="log-out">
                 {% load static %}
                 <span><img src="{% static 'icons/arrow-right.svg' %}" alt="Arrow-right"></span>
                 <span>Log Out</span>
@@ -73,34 +63,26 @@
             <img src="{% static 'icons/menu.svg' %}" alt="Menu">
         </div>
         <div id="middle">
-            <a href="dashboard.html">
+            <a href="{% url 'dashboard' %}">
                 {% load static %}
                 <img src="{% static 'icons/folder-2.png' %}" alt="Folder Icon">
             </a>
-            <a href="policy.html">
+            <a href="{% url 'policy' %}">
                 {% load static %}
                 <img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon">
             </a>
-            <a href="">
+            <a href="{% url 'dashboard' %}">
                 {% load static %}
                 <img src="{% static 'icons/profile.png' %}" alt="Profile Icon">
             </a>
-            <a href="">
-                {% load static %}
-                <img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon">
-            </a>
-            <a href="saved.html">
-                {% load static %}
-                <img src="{% static 'icons/save-2.png' %}" alt="Saved Icon">
-            </a>
         </div>
         <div id="bottom">
-            <a href="user.html">
+            <a href="{% url 'user' %}">
                 {% load static %}
                 <img src="{% static 'icons/user.png' %}" alt="User Icon" id="user">
             </a>
             {% load static %}
-            <a href="">
+            <a href="{% url 'loginform' %}">
                 <img src="{% static 'icons/arrow-right.svg' %}" alt="Arrow-right" id="arrow">
             </a>
         </div>
@@ -123,32 +105,22 @@
 
         </div>
         <div id="lower-div">
-            <a href="dashboard.html">
+            <a href="{% url 'dashboard' %}">
                     <span>
                         {% load static %}
                         <img src="{% static '/icons/folder-2.png' %}" alt="Folder Icon">
                     </span>
                 <span>Dashboard</span>
             </a>
-            <a href="policy.html">
+            <a href="{% url 'policy' %}">
                 {% load static %}
                 <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="clipboard-tick Icon"></span>
                 <span>Policies</span>
             </a>
-            <a href="">
+            <a href="{% url 'dashboard' %}">
                 {% load static %}
                 <span><img src="{% static '/icons/profile.png' %}" alt="Profile Icon"></span>
                 <span>My Profile</span>
-            </a>
-            <a href="">
-                {% load static %}
-                <span><img src="{% static '/icons/document-download.png' %}" alt="Document-download Icon"></span>
-                <span>Downloads</span>
-            </a>
-            <a href="saved.html">
-                {% load static %}
-                <span><img src="{% static '/icons/save-2.png' %}" alt="Saved Icon"></span>
-                <span>Saved</span>
             </a>
         </div>
     </nav>
@@ -161,7 +133,7 @@
 {% for object in object_list %}
 
 {% if object.construction is True %}
-<div id="main-page">
+<div id="generate-main-page">
     <button type="submit" id="search-button">
         {% load static %}
         <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -191,7 +163,7 @@
         </div>
     </div>
 
-    <div style="border-style: solid; width: 80%; overflow: scroll; height: 900px; margin-top: 400px;">
+    <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px;">
         <p>STANDARD TERMS AND CONDITIONS FOR CONSTRUCTION SERVICES</p>
 
         1. ENGAGEMENT AND ACCEPTANCE
@@ -494,7 +466,7 @@
 </div>
 
 {% elif object.finance is True %}
-<div id="main-page">
+<div id="generate-main-page">
     <button type="submit" id="search-button">
         {% load static %}
         <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -522,7 +494,7 @@
             </a>
         </div>
     </div>
-    <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+    <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
         <div>Terms and Conditions
             <p>
                 Welcome to [COMPANY NAME].
@@ -658,7 +630,7 @@
         </div>
     </div>
     {% elif object.employment is True %}
-    <div id="main-page">
+    <div id="generate-main-page">
         <button type="submit" id="search-button">
             {% load static %}
             <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -690,7 +662,7 @@
                 </a>
             </div>
         </div>
-        <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+        <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
             <div>Terms and Conditions
                 <p>
 
@@ -962,7 +934,7 @@
             </div>
         </div>
         {% elif object.freelancer is True %}
-        <div id="main-page">
+        <div id="generate-main-page">
             <button type="submit" id="search-button">
                 {% load static %}
                 <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -991,7 +963,7 @@
                     </a>
                 </div>
             </div>
-            <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+            <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                 <div>Terms and Conditions
                     <p>
                         FREELANCE CONTRACT
@@ -1220,7 +1192,7 @@
                 </div>
             </div>
             {% elif object.health_care is True %}
-            <div id="main-page">
+            <div id="generate-main-page">
                 <button type="submit" id="search-button">
                     {% load static %}
                     <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -1249,7 +1221,7 @@
                         </a>
                     </div>
                 </div>
-                <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+                <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                     <div>Terms and Conditions
                         <p>
                             1. TERM OF AGREEMENT.
@@ -1458,7 +1430,7 @@
                 </div>
 
                 {% elif object.real_estate is True %}
-                <div id="main-page">
+                <div id="generate-main-page">
                     <button type="submit" id="search-button">
                         {% load static %}
                         <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -1487,7 +1459,7 @@
                             </a>
                         </div>
                     </div>
-                    <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+                    <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                         <div>Terms and Conditions
                             <p>
                                 Terms of Use
@@ -1586,7 +1558,7 @@
                         </div>
                     </div>
                     {% elif object.saas is True %}
-                    <div id="main-page">
+                    <div id="generate-main-page">
                         <button type="submit" id="search-button">
                             {% load static %}
                             <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -1615,7 +1587,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+                        <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                             <div>Terms and Conditions
                                 <p>
                                     Free SaaS agreement: cover
@@ -3167,7 +3139,7 @@
                 </div>
 
                 {% load static %}
-                <script src="t-c-preview.js"></script>
+                <script src="{% static 't-c-preview.js' %}"></script>
             </div>
         </div>
 

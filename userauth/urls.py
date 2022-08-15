@@ -15,14 +15,14 @@ args = {'new_user': new_user}
 
 urlpatterns = [
 
-    path("", views.CreateView.as_view(), name="Home"),
+    #path("", views.CreateView.as_view(), name="Home"),
 
-    path("", views.CreateView.as_view(), name="Home"),
+    #path("", views.CreateView.as_view(), name="Home"),
 
-    path("", views.CreateView.as_view(), name="Home"),
+    #path("", views.CreateView.as_view(), name="Home"),
     path("list/", TermsPoliciesView.as_view()),
 
-    path("", views.CreateView.as_view(), name="Home"),
+    #path("", views.CreateView.as_view(), name="Home"),
     # path("list/", ListTheView.as_view()),
 
     path("", views.home.as_view(), name="Home"),

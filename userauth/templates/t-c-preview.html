@@ -24,32 +24,22 @@
                 </a>
             </div>
             <div id="B" class="overlay-content">
-                <a href="dashboard.html">
+                <a href="{% url 'dashboard' %}">
                     <span>
                         {% load static %}
                         <img src="{% static 'icons/folder-2.png' %}" alt="Folder Icon">
                     </span>
                     <span>Dashboard</span>
                 </a>
-                <a href="policy.html">
+                <a href="{% url 'policy' %}">
                     {% load static %}
                     <span ><img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon"></span>
                     <span>Policies</span>
                 </a>
-                <a href="">
+                <a href="{% url 'dashboard' %}">
                     {% load static %}
                     <span><img src="{% static 'icons/profile.png' %}" alt="Profile Icon"></span>
                     <span>My Profile</span>
-                </a>
-                <a href="">
-                    {% load static %}
-                    <span><img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon"></span>
-                    <span>Downloads</span>
-                </a>
-                <a href="saved.html">
-                    {% load static %}
-                    <span><img src="{% static 'icons/save-2.png' %}" alt="Saved Icon"></span>
-                    <span>Saved</span>
                 </a>
             </div>
             <div id="C">
@@ -58,7 +48,7 @@
                     <span><img src="{% static 'icons/user.png' %}" alt="User Icon"></span>
                     <span>Musa</span>
                 </div>
-                <a href="" id="log-out">
+                <a href="{% url 'loginform' %}" id="log-out">
                     {% load static %}
                     <span><img src="{% static 'icons/arrow-right.svg' %}" alt="Arrow-right"></span>
                     <span>Log Out</span>
@@ -74,34 +64,26 @@
                 <img src="{% static 'icons/menu.svg' %}" alt="Menu">
             </div>
             <div id="middle">
-                <a href="dashboard.html">
+                <a href="{% url 'dashboard' %}">
                     {% load static %}
                     <img src="{% static 'icons/folder-2.png' %}"alt="Folder Icon">
                 </a>
-                <a href="policy.html">
+                <a href="{% url 'policy' %}">
                     {% load static %}
                     <img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon">
                 </a>
-                <a href="">
+                <a href="{% url 'dashboard' %}">
                     {% load static %}
                     <img src="{% static 'icons/profile.png' %}" alt="Profile Icon">
                 </a>
-                <a href="">
-                    {% load static %}
-                    <img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon">
-                </a>
-                <a href="saved.html">
-                    {% load static %}
-                    <img src="{% static 'icons/save-2.png' %}"alt="Saved Icon">
-                </a>
             </div>
             <div id="bottom">
-                <a href="user.html">
+                <a href="{% url 'user' %}">
                     {% load static %}
                     <img src="{% static 'icons/user.png' %}" alt="User Icon" id="user">
                 </a>
                 {% load static %}
-                <a href="">
+                <a href="{% url 'loginform' %}">
                     <img src="{% static 'icons/arrow-right.svg' %}" alt="Arrow-right" id="arrow">
                 </a>
             </div>
@@ -124,32 +106,22 @@
 
             </div>
             <div id="lower-div">
-                <a href="dashboard.html">
+                <a href="{% url 'dashboard' %}">
                     <span>
                         {% load static %}
                         <img src="{% static '/icons/folder-2.png' %}" alt="Folder Icon">
                     </span>
                     <span>Dashboard</span>
                 </a>
-                <a href="policy.html">
+                <a href="{% url 'policy' %}">
                     {% load static %}
                     <span ><img src="{% static '/icons/clipboard-tick.png' %}" alt="clipboard-tick Icon"></span>
                     <span>Policies</span>
                 </a>
-                <a href="">
+                <a href="{% url 'dashboard' %}">
                     {% load static %}
                     <span><img src="{% static '/icons/profile.png' %}" alt="Profile Icon"></span>
                     <span>My Profile</span>
-                </a>
-                <a href="">
-                    {% load static %}
-                    <span><img src="{% static '/icons/document-download.png' %}" alt="Document-download Icon"></span>
-                    <span>Downloads</span>
-                </a>
-                <a href="saved.html">
-                    {% load static %}
-                    <span><img src="{% static '/icons/save-2.png' %}" alt="Saved Icon"></span>
-                    <span>Saved</span>
                 </a>
             </div>
         </nav>
@@ -186,7 +158,7 @@
 
 
     {% load static %}
-    <script src="t-c-preview.js"></script>
+    <script src="{% static 't-c-preview.js' %}"></script>    
     </div>
 </body>
 </html>

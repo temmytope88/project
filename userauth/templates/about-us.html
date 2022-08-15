@@ -17,11 +17,11 @@
             {% load static %}
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-              <a href="">Products</a>
-              <a href="">Resources</a>
-              <a href="contact.html">Contact us</a>
-              <a href="loginform.html">Login</a>
-              <a href="sign_up.html" id="bar-start">Get Started</a>
+              <a href="{% url 'index' %}">Products</a>
+              <a href="{% url 'index' %}">Resources</a>
+              <a href="{% url 'contact-us' %}">Contact us</a>
+              <a href="{% url 'loginform' %}">Login</a>
+              <a href="{% url 'signup' %}" id="bar-start">Get Started</a>
             </div>
         </div>
     </div>
@@ -31,11 +31,11 @@
             <img src="{% static 'Logo/logo_white.png' %}" alt="Logo" id="Logo">
         </div>
         <div class="nav-links">
-            <a href="">Products</a>
-            <a href="">Resources</a>
-            <a href="contact.html">Contact us</a>
-            <a href="loginform.html">Login</a>
-            <a href="sign_up.html" id="start">Get Started</a>
+            <a href="{% url 'index' %}">Products</a>
+            <a href="{% url 'index' %}">Resources</a>
+            <a href="{% url 'contact-us' %}">Contact us</a>
+            <a href="{% url 'loginform' %}">Login</a>
+            <a href="{% url 'signup' %}" id="start">Get Started</a>
             <p id="bar" onclick="openNav()">
                 {% load static %}
                 <img src="{% static 'icons/menu_burger.svg' %}" alt="Menu Burger">
@@ -125,20 +125,20 @@
             <img src="{% static 'Logo/logo-blue-yellow.png' %}" alt="" id>
         </div>
         <div id="two">
-            <a href="about-us.html">About us</a>
-            <a href="policy.html">Our Privacy Policy</a>
-            <a href=""> Our Terms of use</a>
+            <a href="{% url 'about-us' %}">About us</a>
+            <a href="{% url 'policy' %}">Our Privacy Policy</a>
+            <a href="{% url 'index' %}"> Our Terms of use</a>
         </div>
         <div id="three">
-            <a href="privacypolicy.html">Privacy Policy Generator</a>
-            <a href="">Terms & Conditions Generator</a>
-            <a href="security&faqs.html">FAQs</a>
+            <a href="{% url 'loginform' %}">Privacy Policy Generator</a>
+            <a href="{% url 'loginform' %}">Terms & Conditions Generator</a>
+            <a href="{% url 'faq' %}">FAQs</a>
         </div>
         <div id="four">
-            <a href="">Help & Support</a>
-            <a href="contact.html">Contact us</a>
-            <a href="">Resources</a>
-            <a href="security&faqs.html">Security FAQ</a>
+            <a href="{% url 'contact-us' %}">Help & Support</a>
+            <a href="{% url 'contact-us' %}">Contact us</a>
+            <a href="{% url 'index' %}">Resources</a>
+            <a href="{% url 'faq' %}">Security FAQ</a>
         </div>
     </footer>
     <script src="{% static 'about-us.js' %}"></script>

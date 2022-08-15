@@ -1,0 +1,1 @@
+web: gunicorn termcreator.wsgi:application --log-file -
